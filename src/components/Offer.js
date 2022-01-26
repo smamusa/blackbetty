@@ -30,7 +30,7 @@ const Offer = ({
   };
 
   const postBetslip = async (betslip) => {
-    await fetch('http://localhost:8080/api/betslips/', {
+    await fetch(`${process.env.REACT_APP_API_SERVER_URL}/betslips/`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

@@ -27,14 +27,16 @@ const App = () => {
 
   // Get matches that are playing
   const fetchOffer = async () => {
-    const res = await fetch(`http://localhost:8080/api/offer`);
+    const res = await fetch(`${process.env.REACT_APP_API_SERVER_URL}/offer`);
     const data = await res.json();
     return data;
   };
 
   // Get player data
   const fetchPlayer = async () => {
-    const res = await fetch('http://localhost:8080/api/players/1');
+    const res = await fetch(
+      `${process.env.REACT_APP_API_SERVER_URL}/players/1`
+    );
     const data = await res.json();
     return data;
   };
