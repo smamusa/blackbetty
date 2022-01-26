@@ -21,3 +21,5 @@ Run the development script
 `npm run start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser. This is the default port.
+
+For the API project visit [Black Betty API](https://github.com/smamusa/blackbetty-api)
