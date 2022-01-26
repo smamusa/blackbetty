@@ -1,13 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0px 10px 0px 10px;
+  font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.welcome img {
+  max-width: 75px;
+}
+
+.wallet {
+  display: flex;
+  min-width: 100px;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: white;
+  background-color: rgb(39, 119, 70);
+  border-radius: 5px;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.wallet h4 {
+  margin-bottom: 2px;
+}
+
+.wallet p {
+  border-top: solid 3px white;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.betamount {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 15px;
+  color: white;
+  background-color: rgb(39, 119, 70);
+  border-radius: 5px;
+  row-gap: 5px;
+  height: 50px;
+}
+
+.container {
+  max-width: 1000px;
+  border: solid 1px black;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.match {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px darkolivegreen;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 5px;
+  gap: 30px;
+}
+
+.betslip {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 5px darkolivegreen;
+  border-radius: 3px;
+  margin: 15px;
+  padding: 5px;
+  gap: 30px;
+}
+
+.betslipInfo {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.subHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-left: 10%;
+  padding-right: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.legend p {
+  padding-left: 10px;
+}
+
+.legend :nth-child(1) {
+  border-left: solid 5px rgb(32, 61, 126);
+}
+.legend :nth-child(2) {
+  border-left: solid 5px rgb(126, 32, 32);
+}
+.legend :nth-child(3) {
+  border-left: solid 5px rgb(43, 126, 32);
+}
+
+.quotas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.quotas :nth-child(1) {
+  border-bottom: solid 5px rgb(32, 61, 126);
+}
+.quotas :nth-child(2) {
+  border-bottom: solid 5px rgb(126, 32, 32);
+}
+.quotas :nth-child(3) {
+  border-bottom: solid 5px rgb(43, 126, 32);
+}
+
+.quota {
+  border: solid 1px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 5px 10px 5px 10px;
+  gap: 5px;
+}
+
+.played {
+  color: white;
+}
+
+.home {
+  background-color: rgb(32, 61, 126);
+}
+
+.away {
+  background-color: rgb(126, 32, 32);
+}
+
+.tied {
+  background-color: rgb(43, 126, 32);
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: center;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
 }
